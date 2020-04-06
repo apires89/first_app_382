@@ -1,0 +1,26 @@
+<h1>HOMEPAGE OF THE APP</h1>
+
+<p>The time now is <%= Time.now.hour %></p>
+
+<h2>Meet our team</h2>
+<ol>
+  <% @members.each do |member|  %>
+  <li>
+    <%= member.capitalize %>
+  </li>
+  <% end %>
+</ol>
+
+<p> Shortcuts to ruby tags</p>
+<p>
+er
+pe
+</p>
+
+<h1>Links</h1>
+
+<a href="/contact">Contact page</a>
+
+<%= link_to "Contact with Rails", contact_path  %>
+<%= link_to "About Page with Rails ", about_path %>
+

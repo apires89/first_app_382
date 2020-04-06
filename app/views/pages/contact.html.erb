@@ -1,0 +1,25 @@
+<h1>Contact Information</h1>
+
+<form action="/contact" method="get">
+  <input type="text" name="member" placeholder="Who are you looking for?">
+  <input type="text" name="id">
+  <input type="submit">
+</form>
+
+<%= params[:member] %>
+<%= params[:id] %>
+
+<h2>Meet our team</h2>
+<% if @members.empty? %>
+ <h1>No Results found</h1>
+<% else %>
+  <ol>
+    <% @members.each do |member|  %>
+    <li>
+      <%= member.capitalize %>
+    </li>
+    <% end %>
+  </ol>
+<% end %>
+
+<%= link_to "Back", root_path %>
